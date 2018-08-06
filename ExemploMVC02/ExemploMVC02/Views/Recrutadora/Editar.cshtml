@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+
+    <div>
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+        </div>
+        <form action="/Recrutadora/Update" method="post">
+            <input type="hidden" name="recrutadora.id"
+                   value="@ViewBag.Recrutadora.Id" />
+            <div>
+                <label for="campo-nome">Nome</label>
+                <input class="form-control" type="text" name="recrutadora.Nome" id="campo-nome" value="@ViewBag.Recrutadora.Nome" />
+            </div>
+            <div>
+                <label for="campo-cpf">CPF</label>
+                <input class="form-control" type="text" name="recrutadora.Cpf" id="campo-cpf" value="@ViewBag.Recrutadora.CPF" />
+            </div>
+            <div>
+                <label for="campo-salario">Salário</label>
+                <input class="form-control" type="text" name="recrutadora.Salário" id="campo-salario" value="@ViewBag.Recrutadora.Salário" />
+            </div>
+            <div>
+                <label for="campo-tempo-empresa">Tempo Empresa</label>
+                <select class="form-control" id="campo-tempo-empresa" name="recrutadora.TempoEmpresa" value="@ViewBag.Recrutadora.TempoEmpresa">
+                    @for (int i = 0; i < 7; i++)
+                    {
+
+                        if (i == @ViewBag.Recrutadora.TempoEmpresa)
+                        {
+                            <option value="@i" selected="selected">@i anos</option>
+                        }
+
+                        else
+                        {
+                            <option value="@i">@i anos</option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn-outline-success" type="submit" title="Botão Salvar" data-toggle="tooltip" />
+                    <i class="fa fa-pencil"></i> Salvar
+                </div>
+            </div>
+        </form>
+    </div>
+
+

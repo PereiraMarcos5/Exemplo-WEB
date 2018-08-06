@@ -1,0 +1,45 @@
+﻿body {
+ 
+}
+
+table{
+    width: 100%;
+}
+
+table thead tr, table tfoot tr{
+    background-color: #0094ff; color: white;
+    height: 40px;
+}
+
+table tbody tr{ color: black; heigth: 30px; 
+                font-size: 16px; font-family:sans-serif;
+}
+
+table tbody tr td{
+    padding-left: 10px;
+}
+
+
+table tr:nth-child(even) tr{
+    background-color: #FFFFFF;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #faec9c;
+}
+
+.botao-nova-recrutadora {
+    width: 150px;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color:  #0094ff;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    line-height: 28px;
+    text-align: center;
+    float: right;
+    margin-bottom: 10px;
+}
